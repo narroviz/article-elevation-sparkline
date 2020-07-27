@@ -53,10 +53,10 @@ function createLink(d) {
 function recircHTML() {
   const storyData = [
   {
-    "image": "",
-    "url": " ",
-    "hed": ""
-  },
+    "image": "around_the_world",
+    "url": "html/around-the-world",
+    "hed": "Around The World"
+  }, 
   {
     "image": "wnba_season_paths",
     "url": "html/wnba-season-history",
@@ -66,11 +66,7 @@ function recircHTML() {
     "url": "html/nba-season-history",
     "hed": "NBA Season History"
   },
-  {
-    "image": "",
-    "url": " ",
-    "hed": ""
-  }];
+  ];
 
   var url = window.location.href;
   var html = storyData.filter(function (d) {
