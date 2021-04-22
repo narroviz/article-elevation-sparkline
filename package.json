@@ -1,7 +1,7 @@
 {
   "name": "starter",
   "version": "4.1.2",
-  "description": "Starter template for Wanderwhim stories",
+  "description": "Starter template for Narro stories",
   "author": "David Newcomb (Extended from Russell Goldenberg)",
   "license": "MIT",
   "engines": {
@@ -75,16 +75,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wanderwhim/starter.git"
+    "url": "git+https://github.com/narroviz/starter.git"
   },
   "keywords": [
-    "wanderwhim",
+    "narro",
     "starter",
     "template"
   ],
   "bugs": {
-    "url": "https://github.com/wanderwhim/starter/issues"
+    "url": "https://github.com/narroviz/starter/issues"
   },
-  "homepage": "https://github.com/wanderwhim/starter#readme",
+  "homepage": "https://github.com/narroviz/starter#readme",
   "browserslist": "last 3 versions"
 }

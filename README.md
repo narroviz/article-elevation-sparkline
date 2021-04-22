@@ -1,4 +1,4 @@
-# Wanderwhim Starter Template
+# Narro Starter Template
 
 A starter template for projects.
 
@@ -6,7 +6,7 @@ A starter template for projects.
 
 **Else contributing to an existing project:** clone the repo andd run `npm install`).
 
-_Please note: do not use or reproduce Wanderwhim logos or fonts without written permission._
+_Please note: do not use or reproduce Narro logos or fonts without written permission._
 
 ## Setup
 
@@ -28,10 +28,10 @@ _Please note: do not use or reproduce Wanderwhim logos or fonts without written 
 
 ### Usage
 
-Use the [starter CLI](https://github.com/wanderwhim/starter-cli).
+Use the [starter CLI](https://github.com/narroviz/starter-cli).
 
 #### Documentation
 
-See the generated [README](https://github.com/wanderwhim/starter/blob/master/README.story.md#development) file in the new project directory for instructions.
-# wanderwhim
-# wanderwhim-starter
+See the generated [README](https://github.com/narroviz/starter/blob/master/README.story.md#development) file in the new project directory for instructions.
+# narro
+# narro-starter
