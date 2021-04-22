@@ -50,7 +50,7 @@ Fill out `data/meta.json`
 
 ##### Analytics
 
-For Wanderwhim analytics use `1 (TBD)`.
+For Narro analytics use `1 (TBD)`.
 
 #### Copy
 
@@ -120,7 +120,7 @@ If there is only one exported function, you can use it in your file with just `f
 
 #### Slider
 
-NoUISlider is included by default, with some preset Wanderwhim styles. To include it, simply include the library in your JS file `import noUiSlider from 'nouislider'`. Then in `src/css/config.styl`, uncomment `no-ui-slider.styl`.
+NoUISlider is included by default, with some preset Narro styles. To include it, simply include the library in your JS file `import noUiSlider from 'nouislider'`. Then in `src/css/config.styl`, uncomment `no-ui-slider.styl`.
 
 #### Google Sheet
 
@@ -165,7 +165,7 @@ Variable names in stylus (use these for `font-family` since they contain proper 
 
 Put everything (images, audio, data, etc) in `src/assets/`.
 
-When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line like `<script src='{{basepath}}assets/scripts/d3.v5.9.1.min.js'></script>`. `basepath` here switches from nothing in local development, to `http://wanderwhim.com/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-Wanderwhim one, make sure to update the `data.basepath` variable in `scripts/html.js`.
+When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line like `<script src='{{basepath}}assets/scripts/d3.v5.9.1.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://narro.design/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-Narro one, make sure to update the `data.basepath` variable in `scripts/html.js`.
 
 # Deploy
 
@@ -187,7 +187,7 @@ Requirements:
 
 In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Uncomment code.
 
-Run `make wanderwhim` to deploy and bust cache. If you only made changes to html/css/js, you can run `make aws-htmljs` then `make aws-cache` (it will be much quicker than re-uploading all your assets).
+Run `make narro` to deploy and bust cache. If you only made changes to html/css/js, you can run `make aws-htmljs` then `make aws-cache` (it will be much quicker than re-uploading all your assets).
 
 ## Launch Checklist
 
@@ -198,7 +198,7 @@ Run `make wanderwhim` to deploy and bust cache. If you only made changes to html
 - create two social images:
   - Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
   - Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
-- Before launching, test the final Wanderwhim link in [Facebook Debugger](https://developers.facebook.com/tools/debug/sharing) to ensure all og tags are working properly.
+- Before launching, test the final Narro link in [Facebook Debugger](https://developers.facebook.com/tools/debug/sharing) to ensure all og tags are working properly.
 - Create Twitter asset:
   - Motion works well on Twitter, so when possible use a scrolling video of the story (.MP4)
   - Tweets should always include some sort of visual asset
@@ -230,7 +230,7 @@ Run `make wanderwhim` to deploy and bust cache. If you only made changes to html
 - Post to FotP (Author posts)
 - Add data to open data repo (with necessary metadata, scripts when possible)
 - Record Process video and post to FotP/Patreon (optional)
-- Make sure repo is on wanderwhim
+- Make sure repo is on narro
 - Update s3
 - Update homepage
 - Release assets - author can tap the promotion team to post assets, but otherwise expected that authors post.

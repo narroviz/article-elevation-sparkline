@@ -4,20 +4,20 @@ const replace = require('replace-in-file');
 // basepath
 replace.sync({
   files: './scripts/html.js',
-  from: 'http://wanderwhim.com/',
+  from: 'https://narro.design/',
   to: '',
 });
 
 // meta
 replace.sync({
   files: './data/meta.json',
-  from: /http:\/\/wanderwhim\.com/g,
+  from: /https:\/\/narro\.design/g,
   to: 'https://site.com',
 });
 
 replace.sync({
   files: './data/meta.json',
-  from: /Wanderwhim/g,
+  from: /Narro/g,
   to: '',
 });
 

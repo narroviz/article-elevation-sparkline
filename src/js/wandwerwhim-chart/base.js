@@ -3,13 +3,13 @@
 /*
  USAGE (example: line chart)
  1. c+p this template to a new file (line.js)
- 2. change wanderwhimChartName to wanderwhimChartLine
- 3. in graphic file: import './wanderwhim-chart/line'
- 4a. const charts = d3.selectAll('.thing').data(data).wanderwhimChartLine();
- 4b. const chart = d3.select('.thing').datum(datum).wanderwhimChartLine();
+ 2. change narroChartName to narroChartLine
+ 3. in graphic file: import './narro-chart/line'
+ 4a. const charts = d3.selectAll('.thing').data(data).narroChartLine();
+ 4b. const chart = d3.select('.thing').datum(datum).narroChartLine();
 */
 
-d3.selection.prototype.wanderwhimChartName = function init(options) {
+d3.selection.prototype.narroChartName = function init(options) {
   function createChart(el) {
     // dom elements
     const $chart = d3.select(el);
@@ -37,7 +37,7 @@ d3.selection.prototype.wanderwhimChartName = function init(options) {
     const Chart = {
       // called once at start
       init() {
-        $svg = $chart.append('svg').attr('class', 'wanderwhim-chart');
+        $svg = $chart.append('svg').attr('class', 'narro-chart');
 
         // create axis
         $axis = $svg.append('g').attr('class', 'g-axis');
