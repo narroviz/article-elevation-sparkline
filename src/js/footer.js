@@ -25,7 +25,7 @@ function loadJS(src, cb) {
 function loadStories(cb) {
   var request = new XMLHttpRequest();
   var v = Date.now();
-  var url = "https://wanderwhim.com/assets/data/stories.json?v=".concat(v);
+  var url = "https://narro.design/assets/data/stories.json?v=".concat(v);
   request.open("GET", url, true);
 
   request.onload = function () {
@@ -44,7 +44,7 @@ function loadStories(cb) {
 
 function createLink(d) {
   if (d.url !== " ") {
-    return "\n\t<a class='footer-recirc__article' href='https://wanderwhim.com/".concat(d.url, "' target='_blank' rel='noopener'>\n\t\t<img class='article__img' src='./../assets/images/").concat(d.image, ".png' alt='").concat(d.hed, "'>\n\t\t<p class='article__headline'>").concat(d.hed, "</p>\n\t</a>\n\t");
+    return "\n\t<a class='footer-recirc__article' href='https://narro.design/".concat(d.url, "' target='_blank' rel='noopener'>\n\t\t<img class='article__img' src='./../assets/images/").concat(d.image, ".png' alt='").concat(d.hed, "'>\n\t\t<p class='article__headline'>").concat(d.hed, "</p>\n\t</a>\n\t");
   } else {
     return "\n\t<a class='footer-recirc__article' target='_blank' rel='noopener'>\n\t\t<img class='article__img'".concat("' alt='").concat(d.hed, "'>\n\t\t<p class='article__headline'>").concat(d.hed, "</p>\n\t</a>\n\t");
   }
@@ -72,7 +72,7 @@ function recircHTML() {
   var html = storyData.filter(function (d) {
     return !url.includes(d.url);
   }).slice(0, 4).map(createLink).join("");
-  d3.select(".wanderwhim-footer .footer-recirc__articles").html(html);
+  d3.select(".narro-footer .footer-recirc__articles").html(html);
 }
 
 function init() {

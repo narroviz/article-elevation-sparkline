@@ -23,53 +23,128 @@
 
 	<main id='content'>
 		<div class='intro'>
-			<h1 class='intro__hed'>Elevation Ridgelines</h1>
-			<p class='intro__dek'>A minimalist view of global elevation.</p>
+			<h1 class='intro__hed'>NBA Season Triangle</h1>
+			<p class='intro__dek'>Visualizing paths through NBA seasons.</p>
 			<p class='intro__byline'>By
 				<a href='http://dnewcomb.com' class="link-text" target='_blank'>
 					<strong>David Newcomb</strong>
 				</a>
 			</p>
-			<time class='intro__time'>July 2020</time>
+			<time class='intro__time'>April 2021</time>
 			<div class='intro__prelude'>
-				{{!-- https://anvaka.github.io/peak-map/#9.68/34/-118 --}}
-				{{!-- https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR --}}
-				{{!-- https://flowingdata.com/2020/01/06/draw-a-ridgeline-map-showing-elevation-for-anywhere-on-earth/ --}}
 				<p>
-	                In 1979, on the <a href="https://www.radiox.co.uk/artists/joy-division/cover-joy-division-unknown-pleasures-meaning/" target="_blank" class="link-text">cover art</a> of Unknown Pleasures, the rock band Joy Division inadvertently popularized a data visualization chart type: <a href="https://www.data-to-viz.com/graph/ridgeline.html" target="_blank" class="link-text">the ridgeline plot</a>. For the band, the layered lines peaking in stark black and white conveyed a sense of the power surging sound they embodied. Recently, in the data visualization world, there's been a resurgence in this chart's popularity. Applying the ridgeline style to land elevation data of <a href="https://imgur.com/gallery/za6oWno" target="_blank" class="link-text">U.S. states</a>, <a href="https://www.reddit.com/r/DataArt/comments/gngkyi/oc_europe_ridgeline_map/?utm_name=iossmf" target="_blank" class="link-text">continents</a>, or even <a href="https://www.reddit.com/r/dataisbeautiful/comments/hit00r/oc_ridge_map_of_middleearth/?utm_source=share&utm_medium=ios_app&utm_name=iossmf" target="_blank" class="link-text">Middle Earth</a>, creates intuitive, minimalist, topographical maps. I'd like to extend these ridgeline maps to display a few different styles. Enjoy the maps below!
+	                After taking a bird's eye view of NBA team histories in a <a target="_blank" class="link-text" href="https://narro.design/html/nba-season-history.html#interactive-div">previous article</a>, I wanted to dive deeper into the unique paths of individual seasons. Two teams can end a season 41-41, but arrive there in very different ways. To help visualize these season paths, I created the NBA Season Triangle. In basketball's history, the <a href="https://en.wikipedia.org/wiki/Triangle_offense#:~:text=The%20triangle%20is%20created%20from,is%20in%20good%20scoring%20position." target="_blank" class="link-text">triangle</a> holds a lofty place, and I hope this graph is a fun way to explore that history. Scroll below to learn more!
 	            </p>
 			</div>
 			</div>
 		</div>
-{{!-- 		<br>
-		<br>
-		<br> --}}
 
-{{!-- 			<div class="preloader">
-			    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple" style="background:0 0"><circle cx="50" cy="50" r="4.719" fill="none" stroke="#3DC257" stroke-width="2"><animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="-1.5s" repeatCount="indefinite"/><animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="-1.5s" repeatCount="indefinite"/></circle><circle cx="50" cy="50" r="27.591" fill="none" stroke="#54a0ff" stroke-width="2"><animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="0s" repeatCount="indefinite"/></circle></svg>
-	  		</div> --}}
-	  	<br>
-		<div id="toggle-container">
-			<button class="toggle" id="toggle-left">Calligraphy</button>
-			<button class="toggle" id="toggle-middle">Joy Division</button>
-			<button class="toggle" id="toggle-right">Earth</button>
+		<section id='scrolly-side'>
+			<div class='scrolly'>
+				<figure class='sticky'>
+					<div class="explanatory-container">
+						<div id="explanatory-paths-wrapper" class="graphic-wrapper"></div>
+					</div>
+				</figure>
+				<article class='article'>
+					<div class='step-intro' data-index='-2'></div>
+					<div class='step' data-index='-1'>
+						<div class='mobile-break'></div>
+						<h1 id="header--1"></h1>
+						<img class="large-image" src="../assets/images/icons/right_triangle.png"></img>
+						<br>
+						<p>
+							On the Season Triangle, the <span class='green-text'>y-axis</span> shows a team's number of wins and the <span class='red-text'>x-axis</span>  shows a team's number of losses.<br><br>Each <span class='gray-text'>gray</span> square is the location of a unique, regular season <span class='green-text'>Win</span> - <span class='red-text'>Loss</span> record.
+						</p>
+					</div>
+					<div class='step' data-index='0'>
+						<div class='mobile-break'></div>
+						<h1 id="header-0"></h1>
+						<img class="large-image" src="../assets/images/icons/trophy_green.png"></img>
+						<br>
+						<p>
+							In the NBA, a perfect season would end up <span class='green-text'>82-0</span>. The season path of perfection would take no detours, starting at 0-0, going all the way up the <span class='green-text'>green</span> line to the top left.
+						</p>
+					</div>
+					<div class='step' data-index='1'>
+						<div class='mobile-break'></div>
+						<h1 id="header-1"></h1>
+						<img class="large-image" src="../assets/images/logos/NBA/Golden State Warriors.png"></img>
+						
+						<br>
+						<p>
+							Although no team has had a perfect regular season, the <a href="https://www.basketball-reference.com/teams/GSW/2016.html" target="_blank" class="link-text-green">2015-16 Golden State Warriors</a> came shockingly close, finishing at <span class='green-text'>73-9</span>.
+						</p>
+					</div>
+					<div class='step' data-index='2'>
+						<div class='mobile-break'></div>
+						<img class="large-image" src="../assets/images/icons/shrug_yellow.png"></img>
+						<br>
+						<h1 id="header-2"></h1>
+						<p>
+							The most "average" record in a full NBA season is <span class='yellow-text'>41-41</span>. If a team alternated wins and losses every single game, they'd travel along this <span class='yellow-text'>yellow</span> staircase of mediocrity.
+							
+						</p>
+					</div>
+					<div class='step' data-index='3'>
+						<div class='mobile-break'></div>
+						<img class="large-image" src="../assets/images/logos/NBA/Seattle Supersonics.png"></img>
+						<br>
+						<h1 id="header-3"></h1>
+						<p>
+							Many teams over many years have ended up at <span class='yellow-text'>41-41</span>. The team which most nearly walked the staircase of mediocrity, however, was the <a href="https://www.basketball-reference.com/teams/SEA/1990.html" target="_blank" class="link-text-yellow">1989-90 Seattle Supersonics</a> <a href="https://www.theringer.com/sonic-boom" target="_blank" class="link-text-yellow">(RIP)</a>.
+						</p>
+					</div>
+					<div class='step' data-index='4'>
+						<div class='mobile-break'></div>
+						<img class="large-image" src="../assets/images/icons/cracked_trophy_red.png"></img>
+						<br>
+						<h1 id="header-4"></h1>
+						<p>
+							And lastly, the worst possible outcome for a season would be an unthinkable <span class='red-text'>0-82</span>. With no interruptions, this rough streak would follow the <span class='red-text'>red</span> line to its very end.
+						</p>
+					</div>
+					<div class='step' data-index='5'>
+						<div class='mobile-break'></div>
+						<img class="large-image" src="../assets/images/logos/NBA/Philadelphia 76ers.png"></img>
+						<br>
+						<h1 id="header-5"></h1>
+						<p>
+							Sadly, the worst record in NBA history belongs to the 76ers. The intentionally bad <a href="https://bleacherreport.com/articles/2729018-the-definitive-history-of-trust-the-process" target="_blank" class="link-text-red">"Process"</a> teams of the 2010s, however, failed to claim it. Instead, Philly's <a href="https://basketball.fandom.com/wiki/Philadelphia_76ers#1967.E2.80.931976:_Fall_of_the_76ers" target="_blank" class="link-text-red">"Nine and 73-ers"</a> team of 1972-73 holds the record. They bottomed out at, you guessed it, <span class='red-text'>9-73</span>.
+						</p>
+					</div>
+					<div class='step-outro' data-index='6'>
+					</div>
+				</article>
+			</div>
+		</section>
+
+
+		<div class='text'>
+			<h1 class='text__hed'>Every Season Path</h1>
+			<div class='text__prelude', id="text">
+				<p>
+	                Using the Season Triangle graph, I plotted every season path of every NBA team. Below, you can type in your favorite team, click on each decade, and hover over the lines to see the particular win-loss records. For some of the most legendary decades, check out the <a class="suggestion" href="#text" style="color: #2D8E40; text-decoration: none; border-bottom: 1px solid #000000;" value="Boston Celtics" decade="1980">1980s Boston Celtics</a>, <a class="suggestion" href="#text" style="color: #4A2583; text-decoration: none; border-bottom: 1px solid #F5AF1B;" value="Los Angeles Lakers" decade="1980">1980s Los Angeles Lakers</a>, <a class="suggestion" href="#text" style="color: #CE1141; text-decoration: none; border-bottom: 1px solid #000000;" value="Chicago Bulls" decade="1990">1990s Chicago Bulls</a> and <a class="suggestion" href="#text" style="color: #000000; text-decoration: none; border-bottom: 1px solid #C4CED4;" value="San Antonio Spurs" decade="2000">2000s San Antonio Spurs</a>.
+	            </p>
+			</div>
 		</div>
-		<div class="wrapper-container">
-			<div id="calligraphy-wrapper" class="graphic-wrapper">
+		<br><br>
 
+		<div class="wrapper-container">
+			
+			<div id="paths-wrapper" class="graphic-wrapper">
+				<div id="basketball-autocomplete" class="autocomplete" placeholder="Choose your team">
+		            <input type="text" class="form-control typeahead" id="basketball-team-input">
+		        </div>
 			</div>
   		</div>
 
-{{!--   		<h1 class="graphic-header">Joy Division</h1>
-  		<div class="wrapper-container">
-			<div id="joy-division-wrapper" class="graphic-wrapper"></div>
-  		</div>
 
-  		<h1 class="graphic-header">Land &amp; Ocean</h1>
-  		<div class="wrapper-container">
-			<div id="detailed-wrapper" class="graphic-wrapper"></div>
-  		</div>
- --}}
+		<svg x=0 y=0 width=55 height=55 style="display:none">
+		 <filter id="grayscale">
+		  <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"/>
+		 </filter>
+		</svg>
 
  		<br>
 		<script src="{{basepath}}assets/scripts/d3-delaunay.min.js"></script>
